@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <button @click="toggle">Clicke me</button>
-    <p id="text" v-show="isShown">Lorem ipsum dolor sit amet,...</p>
     <router-view></router-view>
   </div>
 </template>
