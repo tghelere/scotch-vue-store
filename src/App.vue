@@ -18,7 +18,6 @@ export default {
   methods: {
     toggle() {
       this.isShown = !this.isShown;
-      console.log(this.isShown);
     },
   },
 };
