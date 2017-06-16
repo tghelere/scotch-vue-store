@@ -84,7 +84,7 @@
     props: ['model', 'manufacturers', 'isEditing'],
     methods: {
       saveProduct() {
-        console.log(this.fields);
+        console.log(this.errors);
       },
     },
   };
