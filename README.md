@@ -1,6 +1,6 @@
-# scotch-store
+# ux
 
-> Mini e-commerce project
+> A Vue example
 
 ## Build Setup
 

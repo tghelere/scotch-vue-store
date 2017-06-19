@@ -80,12 +80,27 @@
 </template>
 
 <script>
+  import {
+    ERROR_MSG
+  } from '../../store/mutation-types'
   export default {
     props: ['model', 'manufacturers', 'isEditing'],
-    methods: {
-      saveProduct() {
-        console.log(this.errors);
-      },
+    created () {
+
     },
-  };
+    methods: {
+      saveProduct () {
+        console.log(this.fields.valid())
+        this.$validator.validateAll().then(() => {
+          this.$emit('save-product', this.model)
+        }).catch(() => {
+          this.$store.commit(ERROR_MSG, {
+            type: 'error',
+            title: 'Validation!',
+            content: 'Please ensure the form is valid.'
+          })
+        })
+      }
+    }
+  }
 </script>
